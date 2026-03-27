@@ -24,7 +24,7 @@ This assessment is an opportunity to show us how you think about and build GenAI
 
 Imagine you are an AI engineer at a company that has obtained a large collection of public-domain books from [Project Gutenberg](https://www.gutenberg.org/). Leadership wants you to explore how to unlock the value of this literary catalogue using GenAI. There are no constraints on what you build — whether that's a retrieval-augmented system, an agentic workflow, a structured extraction pipeline, or something we haven't thought of. Pick whatever approach lets you best demonstrate how you think and build.
 
-You have been given a way to get the data which you can find in `data/starter.ipynb`.
+You have been given a way to get the data which you can find in `data/sample.ipynb`.
 
 ### Goal
 
