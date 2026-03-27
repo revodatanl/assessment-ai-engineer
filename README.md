@@ -122,7 +122,9 @@ Save everything in a **private Git repository** and share it with us. We expect 
 
 **Deliver a clean repository.** Remove any redundant files, replace the default README with your own, and provide clear instructions for building and running your project.
 
-We expect you to spend **3–4 hours** on this assessment. Apply your best judgment when prioritizing — a focused, well-documented solution is far more valuable than a sprawling, half-finished one.
+We expect you to spend **~6 hours** on this assessment. Apply your best judgment when prioritizing — a focused, well-documented solution is far more valuable than a sprawling, half-finished one.
+
+**During the interview, you will be expected to demo your solution live and walk the interviewer through it.** Be prepared to explain your design decisions, show how the application works, and discuss what you would do differently with more time.
 
 ## Review
 
