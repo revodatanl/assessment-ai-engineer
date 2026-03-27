@@ -1,0 +1,7 @@
+[project]
+name = "assessment-ai-engineer"
+version = "0.1.0"
+description = "AI engineer "
+readme = "README.md"
+requires-python = ">=3.12.3"
+dependencies = ["ipykernel>=7.2.0", "langchain>=1.2.13", "requests>=2.33.0"]
