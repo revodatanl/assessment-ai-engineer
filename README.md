@@ -39,7 +39,7 @@ Build a GenAI application — or the key components of one — that demonstrates
 
 _For candidates applying to the **AI Engineer** role._
 
-Your focus is on **GenAI techniques and engineering practices**, using whatever tools and frameworks you are most productive with. If Databricks components genuinely strengthen your solution, that is a plus, but Databricks is not required for this assessment.
+Your focus is on **GenAI techniques and engineering practices**, using whatever tools and frameworks you are most productive with. If you use Databricks components for your solution, that is a plus, but it is not required for this assessment.
 
 #### Core Deliverables
 
