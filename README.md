@@ -4,16 +4,11 @@
   - [Introduction](#introduction)
     - [The Scenario](#the-scenario)
     - [Goal](#goal)
-  - [Choose Your Pathway](#choose-your-pathway)
-    - [🅰️ Pathway: Databricks AI Engineer](#️-pathway-databricks-ai-engineer)
+  - [Assessment Pathway](#assessment-pathway)
       - [Core Deliverables](#core-deliverables)
       - [What We're Looking For](#what-were-looking-for)
-      - [Recommended Tools \& References](#recommended-tools--references)
-    - [🅱️ Pathway: AI Engineer (GenAI)](#️-pathway-ai-engineer-genai)
-      - [Core Deliverables](#core-deliverables-1)
-      - [What We're Looking For](#what-were-looking-for-1)
-      - [You Are Free to Use](#you-are-free-to-use)
-  - [Deliverables (Both Pathways)](#deliverables-both-pathways)
+      - [Project Constraints](#project-constraints)
+  - [Deliverables](#deliverables)
   - [Review](#review)
 
 ## Introduction
@@ -24,7 +19,7 @@ This assessment is an opportunity to show us how you think about and build GenAI
 
 Imagine you are an AI engineer at a company that has obtained a large collection of public-domain books from [Project Gutenberg](https://www.gutenberg.org/). Leadership wants you to explore how to unlock the value of this literary catalogue using GenAI. There are no constraints on what you build — whether that's a retrieval-augmented system, an agentic workflow, a structured extraction pipeline, or something we haven't thought of. Pick whatever approach lets you best demonstrate how you think and build.
 
-You have been given a way to get the data which you can find in `data/sample.ipynb`.
+You have been given a way to get the data which you can find in `notebooks/sample.ipynb`.
 
 ### Goal
 
@@ -40,55 +35,17 @@ Build a GenAI application — or the key components of one — that demonstrates
 
 ---
 
-## Choose Your Pathway
-
-This assessment has **two pathways**. Pick the one that matches the role you are applying for. The core problem is the same; what differs is the tooling and platform emphasis.
-
----
-
-### 🅰️ Pathway: Databricks AI Engineer
-
-_For candidates applying to the **Databricks AI Engineer** role._
-
-Your focus is on building within the **Databricks Data Intelligence Platform**, leveraging its native GenAI capabilities.
-
-#### Core Deliverables
-
-Build a GenAI application (or its key components) that demonstrates your ability to work with the Databricks AI stack. Depending on your chosen approach, we expect to see several of the following:
-
-1. **Ingest & prepare** the book data for use in a GenAI context (chunking, parsing, storage in Unity Catalog)
-2. **Enable retrieval** over the book content using Vector Search
-3. **Build an AI-powered component** using the Agent Framework, or a compatible framework like LangGraph / LangChain via `databricks-langchain`
-4. **Serve a foundation model** through Foundation Model APIs or AI Gateway
-5. **Log and evaluate** your application using MLflow (tracing, evaluation metrics, or AI-assisted judges)
-
-#### What We're Looking For
-
-- Familiarity with the Databricks GenAI ecosystem: Unity Catalog, Vector Search, Agent Framework, Model Serving, MLflow
-- Clean, well-structured notebooks and/or Python modules
-- Thoughtful design decisions — we care more about **why** you chose an approach than whether it is the most complex one
-- Evidence that you tested or evaluated your system (even a small eval set counts)
-
-#### Recommended Tools & References
-
-- [Agent Framework tutorial](https://docs.databricks.com/aws/en/generative-ai/tutorials/agent-framework-notebook)
-- [GenAI capabilities overview](https://docs.databricks.com/aws/en/generative-ai/guide/mosaic-ai-gen-ai-capabilities)
-- [RAG on Databricks](https://docs.databricks.com/aws/en/generative-ai/retrieval-augmented-generation)
-- [Databricks Free Edition](https://www.databricks.com/learn/free-edition)
-
----
-
-### 🅱️ Pathway: AI Engineer (GenAI)
+## Assessment Pathway
 
 _For candidates applying to the **AI Engineer** role._
 
-Your focus is on **GenAI techniques and engineering practices**, using whatever tools and frameworks you are most productive with.
+Your focus is on **GenAI techniques and engineering practices**, using whatever tools and frameworks you are most productive with. If you use Databricks components for your solution, that is a plus, but it is not required for this assessment.
 
 #### Core Deliverables
 
 Build a GenAI application (or its key components) that demonstrates your ability to design and implement GenAI systems. Depending on your chosen approach, we expect to see several of the following:
 
-1. **Ingest & prepare** the book data for use in a GenAI context (chunking strategy, embedding, storage in a vector store of your choice)
+1. **Ingest & prepare** the book data for use in a GenAI context (chunking strategy, embedding, optional local vector storage)
 2. **Implement a retrieval pipeline** (RAG, semantic search, or hybrid) that can find relevant passages from the books
 3. **Build an LLM-powered component** — this could be a conversational agent, a chain, an extraction pipeline, or something else entirely
 4. **Evaluate** your system in some way — even a handful of test cases with expected outputs counts
@@ -98,29 +55,35 @@ Build a GenAI application (or its key components) that demonstrates your ability
 - Clean, well-structured notebooks and/or Python modules
 - Understanding of GenAI fundamentals: embeddings, retrieval, prompting, evaluation
 - Thoughtful design decisions — we care more about **why** you chose an approach than whether it is the most complex one
+- A solution that is locally reproducible and easy for us to run
 - Bonus points for agentic patterns (tool use, multi-step reasoning), structured output, or creative applications
 
-#### You Are Free to Use
+#### Project Constraints
 
-- Any LLM provider (OpenAI, Anthropic, local models, etc.)
-- Any framework (LangChain, LangGraph, LlamaIndex, Haystack, Pydantic AI, OpenAI Agents SDK, or plain Python)
-- Any vector store (Chroma, FAISS, Pinecone, Weaviate, Qdrant, or anything else)
-- Any evaluation approach (custom scripts, RAGAS, MLflow, DeepEval, etc.)
+- The only external API providers your project may require are **Anthropic**, **OpenAI**, or **Mistral** for inference.
+- The full project must be reproducible and runnable locally, apart from the chosen inference provider.
+- If you use a vector database or other dependencies, it must run locally and be included as a Docker container in the repository setup.
+- Prefer simple, self-contained architectures. **Less is more**.
+- You may use any framework or evaluation approach that fits these constraints.
 
-## Deliverables (Both Pathways)
+## Deliverables
 
 Save everything in a **private Git repository** and share it with us. We expect to find:
 
-| What | Where | Notes |
-|------|-------|-------|
-| Exploratory work / scratch notebooks | `./scratch/` | Show us your thinking process |
-| Main application code | `./src/` or `./notebooks/` | Whichever fits your approach |
-| Documentation | `README.md` and optionally `./docs/` | Explain the **why**, not the how |
-| Tests (if applicable) | `./tests/` | Even a few assertions go a long way |
-| Data & outputs | `./data/` | Include the input data and any generated artifacts |
-| Requirements / environment | `requirements.txt`, `pyproject.toml`, or equivalent | We need to be able to reproduce your setup |
+| What                                 | Where                                                                                   | Notes                                                                                                                   |
+| ------------------------------------ | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Exploratory work / scratch notebooks | `./scratch/`                                                                            | Show us your thinking process                                                                                           |
+| Main application code                | `./src/` or `./notebooks/`                                                              | Whichever fits your approach                                                                                            |
+| Documentation                        | `README.md` and optionally `./docs/`                                                    | Your `README.md` should explain what the project does, which problem it solves, how it works, and how to run it locally |
+| Tests (if applicable)                | `./tests/`                                                                              | Even a few assertions go a long way                                                                                     |
+| Data & outputs                       | `./data/`                                                                               | Include the input data and any generated artifacts                                                                      |
+| Requirements / environment           | `requirements.txt`, `pyproject.toml`, `Dockerfile`, `docker-compose.yml`, or equivalent | We need to be able to reproduce your setup locally                                                                      |
 
-**Deliver a clean repository.** Remove any redundant files, replace the default README with your own, and provide clear instructions for building and running your project.
+**Deliver a clean repository.** Remove any redundant files, replace the default README with your own, and provide clear instructions for building and running your project locally.
+
+Your submission `README.md` should make it easy for a reviewer to understand the problem you chose, what the project does, how it works, and the exact steps needed to run it.
+
+**Less is more.** Aim for a focused solution of roughly **2048 lines of code or less** this only includes code files such as `.py/.ipynb/etc.` but not configuration files such as `.env/.docker/.yml/.md/etc.`. We care far more about clear thinking, good trade-offs, and a polished end-to-end demo than about breadth for its own sake.
 
 We expect you to spend **~6 hours** on this assessment. Apply your best judgment when prioritizing — a focused, well-documented solution is far more valuable than a sprawling, half-finished one.
 
@@ -128,7 +91,7 @@ We expect you to spend **~6 hours** on this assessment. Apply your best judgment
 
 ## Review
 
-As a note on using AI tools (Claude Code, Cursor, Copilot, etc.), we encourage you to use these tools to enhance your productivity, and we are very curious towards your setup. However, please remember that you are 100% responsible for the code you submit. You need to be able to explain how the code works and discuss the pros and cons of your implementations.
+As a note on using AI tools (Claude Code, Cursor, Copilot, etc.), we encourage you to use these tools to enhance your productivity, and we are very curious towards your setup. However, please remember that you are 100% responsible for the code you submit. You need to be able to explain how the code works and discuss the pros and cons of your implementations. please include your `agents.md/.agents/.cursor/.claude/etc.` in your repository.
 
 Please do **not** use AI assistants in any way during the interview. We want to assess your technical skills, problem-solving abilities, and communication skills. Additionally, we want to evaluate your ability to clearly and concisely explain your thoughts.
 
