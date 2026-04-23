@@ -4,7 +4,7 @@
   - [Introduction](#introduction)
     - [The Scenario](#the-scenario)
     - [Goal](#goal)
-  - [Assessment Pathway](#assessment-pathway)
+  - [Assessment](#assessment)
       - [Core Deliverables](#core-deliverables)
       - [What We're Looking For](#what-were-looking-for)
       - [Project Constraints](#project-constraints)
@@ -35,11 +35,13 @@ Build a GenAI application — or the key components of one — that demonstrates
 
 ---
 
-## Assessment Pathway
+## Assessment
 
 _For candidates applying to the **AI Engineer** role._
 
-Your focus is on **GenAI techniques and engineering practices**, using whatever tools and frameworks you are most productive with. If you use Databricks components for your solution, that is a plus, but it is not required for this assessment.
+Your focus is on **GenAI techniques and engineering practices**, using whatever tools and frameworks you are most productive with.
+
+If you choose to use Databricks components (e.g. for data processing, vector search, model serving, or experiment tracking), that can be a **plus**—but it is **not required**. We care most about a focused, runnable PoC with clear reasoning and a credible evaluation.
 
 #### Core Deliverables
 
@@ -74,7 +76,7 @@ Save everything in a **private Git repository** and share it with us. We expect 
 | ------------------------------------ | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | Exploratory work / scratch notebooks | `./scratch/`                                                                            | Show us your thinking process                                                                                           |
 | Main application code                | `./src/` or `./notebooks/`                                                              | Whichever fits your approach                                                                                            |
-| Documentation                        | `README.md` and optionally `./docs/`                                                    | Your `README.md` should explain what the project does, which problem it solves, how it works, and how to run it locally |
+| Documentation                        | `README.md` plus `Architecture.md` (or `./docs/architecture.md`)                         | `README.md` should explain what the project does, which problem it solves, and how to run it locally; `Architecture.md` should give a short architecture overview (boundaries, main components, and data flow — a C4-style context + container view is enough) |
 | Tests (if applicable)                | `./tests/`                                                                              | Even a few assertions go a long way                                                                                     |
 | Data & outputs                       | `./data/`                                                                               | Include the input data and any generated artifacts                                                                      |
 | Requirements / environment           | `requirements.txt`, `pyproject.toml`, `Dockerfile`, `docker-compose.yml`, or equivalent | We need to be able to reproduce your setup locally                                                                      |
