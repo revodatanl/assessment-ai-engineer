@@ -64,7 +64,7 @@ The deliverable we care about most is the **before → after comparison**: a rep
 
 #### Project Constraints
 
-- The only external API providers your project may require are **Anthropic**, **OpenAI**, or **Mistral** for inference.
+- The only external API providers your project may require are **Anthropic**, **OpenAI**,**Mistral** or Ollama for local inference.
 - The full project must be reproducible and runnable locally, apart from the chosen inference provider.
 - If you use a vector database or other dependencies, it must run locally and be included as a Docker container in the repository setup.
 - Prefer simple, self-contained architectures. **Less is more**.
