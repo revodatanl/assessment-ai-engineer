@@ -84,6 +84,7 @@ Save everything in a **private Git repository** and share it with us. We expect 
 | Tests (if applicable)                | `./tests/`                                                                              | Even a few assertions go a long way                                                                                                                                                                                                                            |
 | Data & outputs                       | `./data/`                                                                               | Include the input data and any generated artifacts                                                                                                                                                                                                             |
 | Requirements / environment           | `requirements.txt`, `pyproject.toml`, `Dockerfile`, `docker-compose.yml`, or equivalent | We need to be able to reproduce your setup locally                                                                                                                                                                                                             |
+| Agent conversations (**mandatory**)  | `./conversations/` (or equivalent)                                                      | Export the **full markdown** of your conversations with AI coding tools (Cursor, Claude Code, Copilot, etc.) and include them in the repository. Submissions without these transcripts are incomplete.                                                         |
 
 
 **Deliver a clean repository.** Remove any redundant files, replace the default README with your own, and provide clear instructions for building and running your project locally.
@@ -98,7 +99,14 @@ We expect you to spend **~6 hours** on this assessment. Apply your best judgment
 
 ## Review
 
-As a note on using AI tools (Claude Code, Cursor, Copilot, etc.), we encourage you to use these tools to enhance your productivity, and we are very curious towards your setup. However, please remember that you are 100% responsible for the code you submit. You need to be able to explain how the code works and discuss the pros and cons of your implementations. please include your `agents.md/.agents/.cursor/.claude/etc.` in your repository.
+As a note on using AI tools (Claude Code, Cursor, Copilot, etc.), we encourage you to use these tools to enhance your productivity, and we are very curious towards your setup. However, please remember that you are 100% responsible for the code you submit. You need to be able to explain how the code works and discuss the pros and cons of your implementations.
+
+You **must** include both of the following in your hand-in:
+
+- Your agent configuration (`AGENTS.md` / `.agents` / `.cursor` / `.claude` / etc.)
+- The **markdown export of your agent conversations** with the AI tools you used while completing this assessment
+
+Submissions that do not include these conversation transcripts will not be considered complete.
 
 Please do **not** use AI assistants in any way during the interview. We want to assess your technical skills, problem-solving abilities, and communication skills. Additionally, we want to evaluate your ability to clearly and concisely explain your thoughts.
 
